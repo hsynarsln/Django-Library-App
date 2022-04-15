@@ -16,21 +16,26 @@ class Category(models.Model):
     ]
     name = models.CharField(
         max_length=100, choices=CATEGORY_NAME_CHOICES, default='Literature')
+    created_date = models.DateTimeField(auto_now_add=True)
+    updated_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
 
 
 class Author(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    created_date = models.DateTimeField(auto_now_add=True)
+    updated_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name}'
+        return self.name
 
 
 class Publisher(models.Model):
     name = models.CharField(max_length=100)
+    created_date = models.DateTimeField(auto_now_add=True)
+    updated_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
@@ -47,6 +52,8 @@ class Book(models.Model):
     published_date = models.DateField()
     total_pages = models.IntegerField()
     description = models.TextField(max_length=1000)
+    created_date = models.DateTimeField(auto_now_add=True)
+    updated_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f'{self.title} by {self.author} ({self.category}) ({self.published_date})'
