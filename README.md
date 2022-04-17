@@ -29,7 +29,7 @@
 
 <!-- This is an example, please update according to your application -->
 
-To clone and run this application, you'll need [Git](https://github.com/hsynarsln/Django-Quiz-App.git)
+To clone and run this application, you'll need [Git](https://github.com/hsynarsln/Django-Library-App.git)
 
 ```bash
 # Clone this repository
